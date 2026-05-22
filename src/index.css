@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #F9FAFB; /* gray-50 */
+    --bg-secondary: #FFFFFF;
+    --text-primary: #111827; /* gray-900 */
+    --text-secondary: #4B5563; /* gray-600 */
+    --accent: #E11D48; /* rose-600 */
+    --accent-light: #FFE4E6; /* rose-100 */
+    --border: #E5E7EB; /* gray-200 */
+    --font-heading: var(--font-display);
+
+    --mood-bg: var(--bg-secondary);
+    --mood-border: var(--border);
+    --impact-bg: var(--accent);
+  }
+
+  /* Eco-Green */
+  [data-theme="eco"] {
+    --bg-primary: #F0FDF4; /* green-50 */
+    --bg-secondary: #FFFFFF;
+    --text-primary: #14532D; /* green-900 */
+    --text-secondary: #166534; /* green-800 */
+    --accent: #15803D; /* green-700 */
+    --accent-light: #DCFCE7; /* green-100 */
+    --border: #BBF7D0; /* green-200 */
+    --font-heading: var(--font-sans);
+  }
+
+  /* Minimal */
+  [data-theme="minimal"] {
+    --bg-primary: #FFFFFF;
+    --bg-secondary: #F9FAFB;
+    --text-primary: #000000;
+    --text-secondary: #6B7280;
+    --accent: #111827;
+    --accent-light: #F3F4F6;
+    --border: #E5E7EB;
+    --font-heading: var(--font-sans);
+  }
+
+  /* Custom Pastel */
+  [data-theme="custom"] {
+    --bg-primary: var(--custom-bg, #FFF0F3); /* pastel pink background */
+    --bg-secondary: #FFFFFF;
+    --text-primary: #4A4E69;
+    --text-secondary: #9A8C98;
+    --accent: var(--custom-accent, #FFB5A7); /* pastel accent */
+    --accent-light: var(--custom-accent-light, #FCD5CE);
+    --border: #F8EDEB;
+    --font-heading: var(--font-sans);
+  }
+
+  /* Vibrant Palette */
+  [data-theme="vibrant"] {
+    --bg-primary: #FCF9F2;
+    --bg-secondary: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #7D7C7A;
+    --accent: #E63946;
+    --accent-light: #FDE2E4;
+    --border: #E5E0D5;
+    --font-heading: var(--font-display);
+
+    --mood-bg: #FFE8D6;
+    --mood-border: #CB997E;
+    --impact-bg: #003566;
+  }
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Hide scrollbar for cleaner look in the mobile prototype container */
+::-webkit-scrollbar {
+  display: none;
+}
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

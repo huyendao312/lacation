@@ -1,0 +1,10 @@
+{
+  "name": "Remix: Lacation",
+  "description": "Travel like a local, not a tourist. AI-powered dynamic itineraries.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
